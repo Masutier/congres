@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+
+{% include 'partials/navbar.html' %}
+
+<div class="col-12 mx-auto">
+    <div id="#banner" class="banner">
+        <img src="static/img/banner/congreso_int_banner.jpg" class="d-block w-100  mb-4" alt="banner">
+    </div>
+
+    <div id="contador" class="contador ">
+        <div class="col-7 mx-auto p-3 marco m-5 c">
+            <h3 class="counterdown">No te pierdas nuestras ponencias y conferencias</h3>
+            <h2 class="counterdown">Solo faltan:</h2>
+            <h1 id="demo" class="counterdown"></h1>
+        </div>
+    </div>
+
+    <div id="pone" class="row">
+        <div class="col-5 mx-auto p-3 marco mb-5 c">
+            <h2 class="counterdown">Te gustaria participar</h2>
+            <h2 class="counterdown">como Ponente?</h2>
+            <a class="btn btn-warning" href="/exponen">Inscripción Ponentes</a>
+        </div>
+        <div class="col-5 mx-auto p-3 marco mb-5 c">
+            <h2 class="counterdown">Para asistir,</h2>
+            <h2 class="counterdown">Inscribete aqui</h2>
+            <a class="btn btn-warning" href="/asisten">Inscripción Asistentes</a>
+        </div>
+    </div>
+
+    <div id="infogen" class="infogen">
+        <div class="col-12 mx-auto mb-5 p-5">
+            <div class="row">
+                <div class="col-4 mx-auto p-3 just">
+                    <h3>Objetivo del congreso</h3>
+                    <p>El congreso tiene por objetivo acopiar propuestas sobre la incorporación de tecnologías digitales en el sector primario de la economía colombiana y aplicarlas en el desarrollo de la política del gobierno nacional sobre el incremento de la creación de valor económico, social y ambiental en las micro y pequeñas empresas campesinas. </p>
+                </div>
+                <div class="col-4 mx-auto">
+                    <img src="static/img/imgns/mic.jpeg" class="imgobj" alt="Back to top">
+                </div>
+                <div class="col-4 mx-auto p-3 just">
+                    <h3>Publico participante</h3>
+                    <p>Empresarios, profesionales, docentes, instructores, estudiantes, aprendices e interesados en general que buscan fortalecer y actualizar sus conocimientos en redes de suministro digitales y conocer buenas prácticas y experiencias relacionadas con las cadenas productivas del agro colombiano.</p>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div id="temas" class="temas">
+        <img src="static/img/eth2.jpg" class="" alt="Back to top">
+
+    </div>
+
+    <div id="asis" class="asis">
+        <img src="static/img/eth1.jpg" class="" alt="Back to top">
+
+    </div>
+
+    <div id="pone" class="row">
+        <div class="col-5 mx-auto p-3 marco m-3 c">
+            <h2 class="counterdown">Te gustaria participar como Ponente?</h2>
+            <a class="btn btn-warning" href="/exponen">Inscripción Ponentes</a>
+        </div>
+        <div class="col-5 mx-auto p-3 marco m-3 c">
+            <h2 class="counterdown">Para asistir, Inscribete aqui</h2>
+            <a class="btn btn-warning" href="/asisten">Inscripción Asistentes</a>
+        </div>
+    </div>
+
+    <div id="comite" class="comite">
+        <img src="static/img/eth1.jpg" class="" alt="Back to top">
+
+    </div>
+
+    <div id="count" class="count">
+        <img src="static/img/eth2.jpg" class="" alt="Back to top">
+
+    </div>
+
+    <div id="mapa" class="mapa">
+        <img src="static/img/eth1.jpg" class="" alt="Back to top">
+
+    </div>
+
+    <div id="pone" class="row">
+        <div class="col-5 mx-auto p-3 marco m-3 c">
+            <h2 class="counterdown">Te gustaria participar como Ponente?</h2>
+            <a class="btn btn-warning" href="/exponen">Inscripción Ponentes</a>
+        </div>
+        <div class="col-5 mx-auto p-3 marco m-3 c">
+            <h2 class="counterdown">Para asistir, Inscribete aqui</h2>
+            <a class="btn btn-warning" href="/asisten">Inscripción Asistentes</a>
+        </div>
+    </div>
+
+    <div id="nosotros" class="nosotros">
+        <h1>Equipo de Comunicaciones</h1>
+        <img src="static/img/eth2.jpg" class="" alt="Back to top">
+
+    </div>
+
+    <div id="contact" class="contact">
+        {% include 'partials/contact.html' %}
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

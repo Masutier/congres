@@ -1,0 +1,163 @@
+{% extends 'layout.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+{% include 'partials/navbar2.html' %}
+    
+<div class="container mb-5">
+    <div class="col-12 mx-auto mt-4">
+        <h1>Inscripción De Ponentes</h1>
+    </div>
+
+    <hr>
+
+    <div class="col-12 mx-auto mt-5">
+        <div class="row">
+            <div class="col-7 mx-auto">
+                <h3>Requisitos</h3>
+                <p class="just">La convocatoria a presentar trabajos en calidad de ponencias, 
+                    relacionados con el tema central, o, subtemas del congreso está dirigida a estudiantes de pre y posgrado, 
+                    docentes, investigadores, profesionales, representantes de organizaciones públicas o privadas; 
+                    quienes estén interesados en presentar los resultados de sus investigaciones y su aplicación en el marco del 
+                    Plan Nacional de Desarrollo "Colombia, potencia mundial de la vida".</p>
+
+                <p class="just">La inscripción al Congreso, por parte de los ponentes, NO TIENE COSTO ALGUNO, por tratarse de 
+                    un evento organizado por una instancia de concertación y una entidad estatal.</p>
+
+                Requisitos para la postulación de trabajos
+                <ul>
+                    <li>Resumen extendido en idioma español, que contenga objetivos, materiales y métodos utilizados, resultados y presentación clara y concisa de las principales conclusiones del trabajo.</li>
+                    <li>Medio de presentación:  Word para Windows (Office 365).</li>
+                    <li>No más de 600 palabras incluido el encabezado y el resumen propiamente dicho.</li>
+                    <li>Márgenes: norma APA.</li>
+                    <li>Fuente: Letra Arial 12 e interlineado sencillo.</li>
+                    <li>Encabezado: Subtema en mayúsculas y minúsculas, margen izquierdo, alineación justificada, con una extensión máxima de 10 palabras.</li>
+                    <li>Título del trabajo: en mayúsculas, negrita, alineación centralizada.</li>
+                    <li>Nombre del autor (es).</li>
+                    <li>Pertenencia institucional (cuando aplique): indicar la pertenencia después de los autores.</li>
+                    <li>Palabras Clave: hasta cinco.</li>
+                    <li>Resumen.</li>
+                </ul>
+                <p class="just">Los proyectos postulados deberán enviarse al correo oficial del evento comitecientifico2023msl@gmail.com y cargar el resumen en formato Word o pdf, teniendo en cuenta los criterios anteriores. Aquellos resúmenes que sean seleccionados según los criterios definidos enviarán su artículo de investigación para ponencia y publicación en la revista oficial del Congreso.</p>
+                <p class="just">Todos los resúmenes recibidos serán evaluados por un miembro del comité científico, quien verificará el cumplimiento de los criterios de evaluación y las calidades requeridas por las publicaciones del Congreso, con lo cual emitirá su concepto por escrito que se da a conocer en reunión formal del comité científico.</p>
+                        
+                Criterios de evaluación:
+                <ul>
+                    <li>Originalidad</li>
+                    <li>Pertinencia</li>
+                    <li>Fundamentación teórica</li>
+                    <li>Aplicabilidad</li>
+                    <li>Replicabilidad</li>
+                    <li>Impacto académico, social y económico</li>
+                </ul>
+
+                <p class="just">Pasado este proceso, el comité organizador notificará a los autores cuyas ponencias fueron aprobadas a través del correo electrónico; posteriormente se les solicitará el envío del artículo para someterlo a publicación en las memorias del Congreso.</p>
+
+                Requisitos para la presentación de las ponencias
+                <p class="just">Con la presentación del resumen el autor o los autores autorizan al Congreso y a la Mesa Sectorial de Logística SENA para consolidar las ponencias y entregarlas a los participantes y a formar parte de las memorias del Congreso.</p>
+
+                Exposición de las ponencias.
+                <p class="just">Los Trabajos que hayan sido aceptados serán presentados en forma presencial o virtual oral por el autor(es) de conformidad con la programación establecida y previamente comunicada. Las presentaciones tendrán una duración total de 30 minutos, 15 minutos para la exposición y 15 minutos para atender preguntas.</p>
+
+                Exposición de las ponencias.
+                <p class="just">Los Trabajos que hayan sido aceptados serán presentados en forma presencial  o virtual oral por el autor (es) en conformidad con la programación establecida y previamente comunicada.  Las presentaciones tendrán una duración de 30 minutos, (15 para la exposición y 15 para atender preguntas y el debate). Aunque el Congreso dispone de los recursos audiovisuales necesarios, es recomendable que el ponente confirme los recursos que necesita.</p>
+                
+                La  presentación, dado el tiempo asignado, debe contener:
+                <ul>
+                    <li>Originalidad</li>
+                    <li>Pertinencia</li>
+                    <li>Fundamentación teórica</li>
+                    <li>Aplicabilidad</li>
+                    <li>Replicabilidad</li>
+                    <li>Impacto académico</li>
+                    <li>Impacto sobre la creación de valor económico, social y ambiental en las micro y pequeñas empresas campesinas.</li>
+                </ul>
+
+                Reconocimiento a los ponentes:
+                <ul>
+                    <li>Certificado de ponencia presentada.</li>
+                    <li>Certificado de reconocimiento a la mejor ponencia de acuerdo con el mayor puntaje en la evaluación.</li>
+                    <li>Publicación en las memorias del evento.</li>
+                </ul>
+
+            </div>
+
+            <div class="col-4 mx-auto marco">
+                <h3 class="pt-5 c">Formulario Para Ponentes</h3>
+                <form action="" method="POST">
+                    <div class="col-12 mx-auto mt-5 mb-2">
+                        <div class="col-12 mb-4">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombres" placeholder="Nombres" name="nombres">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos">
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="phone" class="form-label">Numero de Contacto</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Teléfono" name="phone">
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <label for="empresa" class="form-label">Empresa</label>
+                            <input type="text" class="form-control" id="empresa" placeholder="Empresa" name="empresa">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="cargo" class="form-label">Cargo</label>
+                            <input type="text" class="form-control" id="cargo" placeholder="Cargo" name="cargo">
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <label for="tema" class="form-label">Tema a Presentar</label>
+                            <input type="text" class="form-control" id="tema" placeholder="Tema" name="tema">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="titulo" class="form-label">Titulo de la Presentación</label>
+                            <input type="text" class="form-control" id="titulo" placeholder="Titulo" name="titulo">
+                        </div>
+
+                        <div class="col-12 mb-2">
+                            <label for="comentarios" class="form-label">Comentarios</label>
+                            <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-9 mx-auto d-grid gap-2 mb-5">
+                        <button class="btn btn-success mt-5" type="submit">Submit</button>
+                    </div>
+                    
+                </form>
+                <div class="col-11 mx-auto mt-5">
+                    <h5>Comité científico y gestión de ponentes</h5>
+                    <ul>
+                        <li>Msc. Feres Sahid Castaño</li>
+                        <li>Msc. Román Rodríguez</li>
+                        <li>Msc. Benjamín Pinzón Hoyos</li>
+                        <li>Msc. Fabiola Pinzón Hoyos</li>
+                        <li>Msc. Luis Flórez Rubio</li>
+                    </ul>
+                </div>
+
+                <div class="col-11 mx-auto mt-5 just">
+                    Aunque el Congreso dispone de los recursos audiovisuales necesarios, es recomendable que el ponente confirme los recursos que necesita.
+                </div>
+
+                <div class="col-11 mx-auto mt-5">
+                    El correo oficial del evento es:
+                </div>
+                <div class="col-11 mx-auto">
+                    comitecientifico2023msl@gmail.com
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

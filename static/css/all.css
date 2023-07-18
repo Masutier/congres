@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+.borde {
+    border: solid 1px black !important;
+}
+.c {
+    text-align: center !important;
+}
+.imgnav {
+    width: 100px;
+    border-radius: 15px;
+}
+.just {
+    text-align: justify;
+}
+
+/* Counterdown */
+.marco {
+    background-color: #2C7684;
+    color: #FBFBE2;
+    border-radius: 15px;
+}
+.counterdown {
+    color: #FBFBE2;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Counterdown */
+.imgobj {
+    width: 100%;
+}
+
+
+
+
+/* Contact */
+.contact {
+    background-color: #2C7684;
+    color: #FBFBE2;
+    margin-top: 20px;
+}
+.imgred {
+    width: 60px;
+    padding: 10px;
+}
+.imgicont {
+    width: 100px;
+    padding: 10px;
+}
+.imgform {
+    width: 150px;
+}
+
+/* back-to-top */
+
+.backtotop {
+    width: 40pt;
+    height: auto;
+    position: fixed;
+    bottom: 4.50rem;
+    right: 1.75rem;
+    z-index: 999;
+}
+.backtotop:hover {
+    color: transparent;
+    background-color: transparent;
+}
+
+
