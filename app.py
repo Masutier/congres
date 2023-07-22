@@ -2,7 +2,7 @@ import os
 import json
 import sqlite3 as sql3
 from datetime import datetime, timedelta
-from flask import Flask, render_template as render, flash, redirect, request, url_for, jsonify
+from flask import Flask, render_template as render, flash, redirect, request, url_for, send_file
 
 with open("/home/gabriel/prog/json_config/csvTools.json") as config_file:
     config = json.load(config_file)
@@ -70,6 +70,13 @@ def asisten():
             return redirect(url_for('home'))
 
     return render("asistform.html")
+
+
+@app.route('/downpdf')
+def downpdf():
+    requisitos = 'static/docs/ipython.pdf'
+
+    return send_file(requisitos, as_attachment=True)
 
 
 if __name__ == '__main__':
