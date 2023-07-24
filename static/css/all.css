@@ -60,9 +60,9 @@
     border-radius: 50%;
     border: 13px solid rgb(57, 169, 0, 0.4);
 }
-.imgcommbak {
-    background-image: url('/static/img/imgns/vector1.jpeg');
-
+nosotros .nosotros {
+    background-image: url('/static/img/imgns/vector3.jpg');
+    background-size: cover;
 }
 
 /* Contact */
