@@ -34,12 +34,12 @@
     font-weight: 400;
 }
 .mbup {
-    margin-top: -20%;
+    margin-top: -15%;
 }
 .mbuplett {
     color: #FBFBE2;
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: 300;
 }
 .colfond {
@@ -54,7 +54,16 @@
     border-radius: 7px;
 }
 
-/*EQUIPO COMUNICACION */
+/* MAPA */
+.maptxt {
+    margin: auto;
+}
+.imgmap {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* EQUIPO COMUNICACION */
 .imgcomm {
     width: 100%;
     border-radius: 50%;
@@ -97,5 +106,3 @@ nosotros .nosotros {
     color: transparent;
     background-color: transparent;
 }
-
-
