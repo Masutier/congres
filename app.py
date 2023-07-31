@@ -74,7 +74,7 @@ def asisten():
 
 @app.route('/downpdf')
 def downpdf():
-    requisitos = 'static/docs/ipython.pdf'
+    requisitos = 'static/docs/DOCUMENTO CONGRESO.pdf'
 
     return send_file(requisitos, as_attachment=True)
 
