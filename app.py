@@ -4,7 +4,7 @@ import sqlite3 as sql3
 from datetime import datetime, timedelta
 from flask import Flask, render_template as render, flash, redirect, request, url_for, send_file
 
-with open("/home/gabriel/prog/json_config/csvTools.json") as config_file:
+with open("/etc/congreso.json") as config_file:
     config = json.load(config_file)
 
 app = Flask(__name__)
