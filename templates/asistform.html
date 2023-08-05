@@ -1,64 +1,58 @@
 {% extends 'layout.html' %}
 {% block title %} {{title}} {% endblock %}
 {% block content %}
-{% include 'partials/navbar.html' %}
+{% include 'partials/navbar2.html' %}
     
 <div class="container mb-5 p-5">
-    <div class="col-12 mx-auto mt-4">
-        <h1>Formulario De Inscripción Para Asistentes</h1>
+    <div class="col-12 mx-auto">
+        <h1>Formulario De Registro Para Asistentes</h1>
     </div>
 
     <hr>
 
-    <div class="col-12 mx-auto mt-5 marco">
+    <div class="col-10 mx-auto p-5 marco">
         <form action="" method="POST">
             
-            <div class="col-11 mx-auto mb-3 pt-4">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group mb-4">
                 <div class="row">
-                    <div class="col-6 mb-3">
-                        <label for="nombres" class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="nombres" placeholder="Nombres" name="nombres">
+                    <div class="col-6 mx-auto c">
+                        {{ form.nombres(class_="form-control", size=32) }}
                     </div>
-                    <div class="col-6 mb-3">
-                        <label for="apellidos" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos">
+                    <div class="col-6 mx-auto c">
+                        {{ form.apellidos(class_="form-control", size=32) }}
                     </div>
                 </div>
             </div>
-
-            <div class="col-11 mx-auto mb-3">
+            <div class="mb-4">
                 <div class="row">
-                    <div class="col-6 mb-3">
-                        <label for="email" class="form-label">Correo Electronico</label>
-                        <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" name="email">
+                    <div class="col-6 mx-auto c">
+                        {{ form.email(class_="form-control", size=32) }}
                     </div>
-                    <div class="col-6 mb-3">
-                        <label for="phone" class="form-label">Numero de Contacto</label>
-                        <input type="text" class="form-control" id="phone" placeholder="Celular" name="phone">
+                    <div class="col-6 mx-auto c">
+                        {{ form.phone(class_="form-control", size=32) }}
                     </div>
                 </div>
             </div>
-
-            <div class="col-11 mx-auto mt-3">
+            <div class="mb-4">
                 <div class="row">
-                    <div class="col-6 mb-3">
-                        <label for="empresa" class="form-label">Empresa</label>
-                        <input type="text" class="form-control" id="empresa" placeholder="Empresa" name="empresa">
+                    <div class="col-6 mx-auto c">
+                        {{ form.empresa(class_="form-control", size=32) }}
                     </div>
-                    <div class="col-6 mb-3">
-                        <label for="cargo" class="form-label">Cargo</label>
-                        <input type="text" class="form-control" id="cargo" placeholder="Cargo" name="cargo">
+                    <div class="col-6 mx-auto c">
+                        {{ form.cargo(class_="form-control", size=32) }}
                     </div>
                 </div>
             </div>
+            <br/>
 
-            <div class="col-4 mx-auto d-grid gap-2 pb-5">
-                <button class="btn btn-success mt-3" type="submit">Inscripcion</button>
+            <div class="col-4 mx-auto d-grid gap-2  c">
+                {{ form.submit(class_="form-control") }}
             </div>
             
         </form>
     </div>
 </div>
-
 
 {% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+{% include 'partials/navbaruser.html' %}
+
+
+<div class="col-10 mx-auto mt-5 c ">
+    <h1>Total Inscritos</h1>
+    <hr>
+
+    <div class="col-8 mx-auto mt-5 p-5 c marco">
+        
+        <div class="row">
+            <div class="col-6">
+                <div class="col-md">
+                    <div class="card mb-1 c" id="total-orders">
+                        <div class="card-header">
+                            <h5 class="card-title">Asistentes</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">{{asist}}</h2>
+                        </div>
+                        <div class="card-body">
+                            <a class="btn btn-warning" href="{{ url_for('downxlsxAssis') }}">Exportar listado a Asistentes.xlsx</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="col-md">
+                    <div class="card mb-1 c" id="orders-payment">
+                        <div class="card-header">
+                            <h5 class="card-title">Ponentes</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">{{ponent}}</h2>
+                        </div>
+                        <div class="card-body">
+                            <a class="btn btn-warning" href="{{ url_for('downxlsxPonne') }}">Exportar listado a Ponentes.xlsx</a>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

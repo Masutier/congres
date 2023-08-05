@@ -2,7 +2,7 @@
 {% block title %} {{title}} {% endblock %}
 {% block content %}
 {% include 'partials/navbar2.html' %}
-    
+
 <div class="container mb-5">
     <div class="col-12 mx-auto mt-4">
         <h1>Inscripción De Ponentes</h1>
@@ -84,53 +84,51 @@
             <div class="col-4 mx-auto marco">
                 <h3 class="pt-5 c">Formulario Para Ponentes</h3>
                 <form action="" method="POST">
+            
+                    {{ form.hidden_tag() }}
+
                     <div class="col-12 mx-auto mt-5 mb-2">
-                        <div class="col-12 mb-4">
-                            <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" placeholder="Nombres" name="nombres">
-                        </div>
-                        <div class="col-12 mb-4">
-                            <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos">
+                        <div class="col-12 mb-5">
+                            {{ form.nombres(class_="form-control", size=32) }}
                         </div>
 
-                        <div class="col-12 mb-4">
-                            <label for="email" class="form-label">Correo Electronico</label>
-                            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" name="email">
-                        </div>
-                        <div class="col-12 mb-4">
-                            <label for="phone" class="form-label">Numero de Contacto</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Celular" name="phone">
+                        <div class="col-12 mb-5">
+                            {{ form.apellidos(class_="form-control", size=32) }}
                         </div>
 
-                        <div class="col-12 mb-4">
-                            <label for="empresa" class="form-label">Empresa</label>
-                            <input type="text" class="form-control" id="empresa" placeholder="Empresa" name="empresa">
-                        </div>
-                        <div class="col-12 mb-4">
-                            <label for="cargo" class="form-label">Cargo</label>
-                            <input type="text" class="form-control" id="cargo" placeholder="Cargo" name="cargo">
+                        <div class="col-12 mb-5">
+                            {{ form.email(class_="form-control", size=32) }}
                         </div>
 
-                        <div class="col-12 mb-4">
-                            <label for="tema" class="form-label">Tema a Presentar</label>
-                            <input type="text" class="form-control" id="tema" placeholder="Tema" name="tema">
+                        <div class="col-12 mb-5">
+                            {{ form.phone(class_="form-control", size=32) }}
                         </div>
-                        <div class="col-12 mb-4">
-                            <label for="titulo" class="form-label">Titulo de la Presentación</label>
-                            <input type="text" class="form-control" id="titulo" placeholder="Titulo" name="titulo">
+
+                        <div class="col-12 mb-5">
+                            {{ form.empresa(class_="form-control", size=32) }}
+                        </div>
+
+                        <div class="col-12 mb-5">
+                            {{ form.cargo(class_="form-control", size=32) }}
+                        </div>
+
+                        <div class="col-12 mb-5">
+                            {{ form.tema(class_="form-control", size=32) }}
+                        </div>
+
+                        <div class="col-12 mb-5">
+                            {{ form.titulo(class_="form-control", size=32) }}
                         </div>
 
                         <div class="col-12 mb-2">
-                            <label for="comentarios" class="form-label">Comentarios</label>
-                            <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
+                            {{ form.comentarios(class_="form-control", size=32) }}
+                        </div>
+
+                        <div class="col-6 mx-auto d-grid gap-2 mt-5 c">
+                            {{ form.submit(class_="form-control btn btn-warning") }}
                         </div>
                     </div>
 
-                    <div class="col-9 mx-auto d-grid gap-2 mb-5">
-                        <button class="btn btn-warning mt-5" type="submit">Inscripcion</button>
-                    </div>
-                    
                 </form>
 
                 <div class="col-11 mx-auto mt-5 p-3 borde r">

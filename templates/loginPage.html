@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+{% include 'partials/navbar2.html' %}
+
+{% if username %}
+
+    <h1>Pagina de Ingreso</h1>
+    <h3>{{ username }}</h3>
+    <h3>{{ password }}</h3>
+
+{% else %}
+
+    <div class="container mb-5 p-5">
+        <div class="col-12 mx-auto">
+            <h1>Ingreso</h1>
+        </div>
+
+        <hr>
+
+        <div class="col-10 mx-auto p-5 marco">
+            <form action="" method="POST">
+                
+                    {{ form.hidden_tag() }}
+
+                <div class="form-group mb-4">
+                    <div class="row">
+                        <div class="col-6 mx-auto c">
+                            {{ form.username(class_="form-control", size=32) }}
+                        </div>
+                        <div class="col-6 mx-auto c">
+                            {{ form.password(class_="form-control", size=32) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 mx-auto d-grid gap-2 mt-5 c">
+                    {{ form.submit(class_="form-control") }}
+                </div>
+
+                <div class="col-5 mx-auto d-grid gap-2 mt-4 c">
+                    <a class="atag" href="{{ url_for('register') }}">No tengo cuenta</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+{% endif %}
+
+{% endblock %}

@@ -16,6 +16,16 @@
 .just {
     text-align: justify;
 }
+.logi {
+    color: #f6f6f7;
+}
+.logi:hover {
+    color: #c1c1f8;
+}
+.atag {
+    color: #f6f6f7;
+    text-decoration: none;
+}
 
 
 /* Counterdown */
