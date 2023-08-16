@@ -17,14 +17,17 @@ with open("/etc/congreso.json") as config_file:
 app = Flask(__name__)
 app.config['SECRET_KEY'] = config['SECRET_KEY']
 app.config['SQLALCHEMY_DATABASE_URI'] = config['DB_ADDRESS']
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
+app.app_context().push()
 
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), nullable=False, unique=True)
     password = db.Column(db.String(150), nullable=False)
+    active = db.Column(db.String(5), nullable=False)
     def __repr__(self):
         return '<User %r>' % self.username
 
@@ -117,6 +120,7 @@ def exponen():
             )
         db.session.add(new_ponente)
         db.session.commit()
+        flash('La inscripción se realizó correctamente')
         return redirect(url_for('home'))
 
     return render("expoform.html", form=form)
@@ -137,6 +141,7 @@ def asisten():
             )
         db.session.add(new_assistant)
         db.session.commit()
+        flash('La inscripción se realizó correctamente')
         return redirect(url_for('home'))
 
     return render("asistform.html", form=form)
@@ -152,7 +157,7 @@ def register():
 
         if password == password2:
             hashed_password = bcrypt.generate_password_hash(form.password.data)
-            new_user = User(username=form.username.data, password=hashed_password)
+            new_user = User(username=form.username.data, password=hashed_password, active="NO")
             db.session.add(new_user)
             db.session.commit()
             flash('El registro se completo correctamente.')
@@ -181,8 +186,12 @@ def loginPage():
         user = User.query.filter_by(username=form.username.data).first()
         if user:
             if bcrypt.check_password_hash(user.password, form.password.data):
-                login_user(user)
-                return redirect(url_for("profile"))
+                if user.active == "YES":
+                    login_user(user)
+                    return redirect(url_for("profile"))
+                else:
+                    flash('Aun no estas autorizado')
+                    return render('index.html')
             else:
                 flash('Algo salio mal. Intentelo otra vez')
 
