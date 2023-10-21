@@ -10,14 +10,17 @@ from wtforms.validators import InputRequired, Email, Length, ValidationError
 from flask_bcrypt import Bcrypt
 from openpyxl import Workbook
 
-
-with open("/etc/congreso.json") as config_file:
-    config = json.load(config_file)
+with open("/home/gabriel/prog/json_config/congreso.json") as config_file:
+    sec_config = json.load(config_file)
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = config['SECRET_KEY']
-app.config['SQLALCHEMY_DATABASE_URI'] = config['DB_ADDRESS']
+app.config['SECRET_KEY'] = sec_config['SECRET_KEY']
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///IVcongress.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['PROPAGATE_EXCEPTIONS'] = True
+
+
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 app.app_context().push()

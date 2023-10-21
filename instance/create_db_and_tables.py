@@ -2,12 +2,8 @@ import os
 import json
 import sqlite3 as sql3
 
-if PRODUCTION:
-    with open("/etc/congreso.json") as config_file:
-        config = json.load(config_file)
-else:
-    with open("/home/gabriel/prog/json_config/congreso.json") as config_file:
-        config = json.load(config_file)
+with open("/home/gabriel/prog/json_config/congreso.json") as config_file:
+    config = json.load(config_file)
 
 conn = sql3.connect(config['DB_ADDRESS'])
 cursor = conn.cursor()
