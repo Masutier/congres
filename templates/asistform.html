@@ -11,44 +11,42 @@
     <hr>
 
     <div class="col-10 mx-auto p-5 marco">
-        <form action="" method="POST">
-            
-            {{ form.hidden_tag() }}
+        <form action="{{ url_for('asisten') }}" method="POST">
 
             <div class="form-group mb-4">
                 <div class="row">
                     <div class="col-6 mx-auto c">
-                        {{ form.nombres(class_="form-control", size=32) }}
+                        <input type="text" class="form-control" size=32 id="nombres" name="nombres", placeholder="Nombre/s">
                     </div>
                     <div class="col-6 mx-auto c">
-                        {{ form.apellidos(class_="form-control", size=32) }}
-                    </div>
-                </div>
-            </div>
-            <div class="mb-4">
-                <div class="row">
-                    <div class="col-6 mx-auto c">
-                        {{ form.email(class_="form-control", size=32) }}
-                    </div>
-                    <div class="col-6 mx-auto c">
-                        {{ form.phone(class_="form-control", size=32) }}
+                        <input type="text" class="form-control" size=32 id="apellidos" name="apellidos", placeholder="Apellidos">
                     </div>
                 </div>
             </div>
             <div class="mb-4">
                 <div class="row">
                     <div class="col-6 mx-auto c">
-                        {{ form.empresa(class_="form-control", size=32) }}
+                        <input type="email" class="form-control" size=32 id="email" name="email", placeholder="Correo">
                     </div>
                     <div class="col-6 mx-auto c">
-                        {{ form.cargo(class_="form-control", size=32) }}
+                        <input type="text" class="form-control" size=32 id="phone" name="phone", placeholder="Teléfono">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="row">
+                    <div class="col-6 mx-auto c">
+                        <input type="text" class="form-control" size=32 id="empresa" name="empresa", placeholder="Empresa">
+                    </div>
+                    <div class="col-6 mx-auto c">
+                        <input type="text" class="form-control" size=32 id="cargo" name="cargo", placeholder="Cargo">
                     </div>
                 </div>
             </div>
             <br/>
 
             <div class="col-4 mx-auto d-grid gap-2  c">
-                {{ form.submit(class_="form-control") }}
+                <input class="btn btn-success" type="submit" value="Inscribirse">
             </div>
             
         </form>

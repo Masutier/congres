@@ -133,49 +133,47 @@
 
             <div class="col-4 mx-auto marco">
                 <h3 class="pt-5 c">Formulario Para Ponentes</h3>
-                <form action="" method="POST">
-            
-                    {{ form.hidden_tag() }}
+                <form action="{{ url_for('exponen') }}" method="POST">
 
                     <div class="col-12 mx-auto mt-5 mb-2">
                         <div class="col-12 mb-5">
-                            {{ form.nombres(class_="form-control", size=32) }}
+                            <input type="text" class="form-control" size=32 id="nombres" name="nombres", placeholder="Nombre/s">
                         </div>
 
                         <div class="col-12 mb-5">
-                            {{ form.apellidos(class_="form-control", size=32) }}
+                            <input type="text" class="form-control" size=32 id="apellidos" name="apellidos", placeholder="Apellidos">
                         </div>
 
                         <div class="col-12 mb-5">
-                            {{ form.email(class_="form-control", size=32) }}
+                            <input type="email" class="form-control" size=32 id="email" name="email", placeholder="Correo">
                         </div>
 
                         <div class="col-12 mb-5">
-                            {{ form.phone(class_="form-control", size=32) }}
+                            <input type="text" class="form-control" size=32 id="phone" name="phone", placeholder="Teléfono">
                         </div>
 
                         <div class="col-12 mb-5">
-                            {{ form.empresa(class_="form-control", size=32) }}
+                            <input type="text" class="form-control" size=32 id="empresa" name="empresa", placeholder="Empresa">
                         </div>
 
                         <div class="col-12 mb-5">
-                            {{ form.cargo(class_="form-control", size=32) }}
+                            <input type="text" class="form-control" size=32 id="cargo" name="cargo", placeholder="Cargo">
                         </div>
 
                         <div class="col-12 mb-5">
-                            {{ form.tema(class_="form-control", size=32) }}
+                            <input type="text" class="form-control" size=32 id="tema" name="tema", placeholder="Tema">
                         </div>
 
                         <div class="col-12 mb-5">
-                            {{ form.titulo(class_="form-control", size=32) }}
+                            <input type="text" class="form-control" size=32 id="titulo" name="titulo", placeholder="Titulo">
                         </div>
 
                         <div class="col-12 mb-2">
-                            {{ form.comentarios(class_="form-control", size=32) }}
+                            <input type="text" class="form-control" size=32 id="comentarios" name="comentarios", placeholder="Comentarios">
                         </div>
 
                         <div class="col-6 mx-auto d-grid gap-2 mt-5 c">
-                            {{ form.submit(class_="form-control btn btn-warning") }}
+                            <input class="btn btn-success" type="submit" value="Inscribirse">
                         </div>
                     </div>
 
